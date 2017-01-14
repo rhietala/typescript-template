@@ -1,6 +1,19 @@
 {
   "extends": "tslint:latest",
+  "rulesDirectory": [
+    "node_modules/tslint-immutable/rules"
+  ],
   "rules": {
+    "readonly-interface": true,
+    "readonly-indexer": true,
+    "readonly-array": true,
+    "no-let": true,
+    "no-this": true,
+    "no-mixed-interface": true,
+    "no-expression-statement": true,
+    "no-var-keyword": true,
+    "no-label": true,
+    "no-semicolon-interface": true,
     "curly": true
   },
   "jsRules": {
