@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && mocha build/test",
-    "test:watch": "mocha -w build/test",
+    "test_no_fail": "tsc && mocha build/test || exit 0",
+    "test:watch": "watch 'npm run test_no_fail' ./test -du",
     "postinstall": "npm run build",
     "build": "tsc",
     "build:watch": "tsc -w",
     "start": "node build/index.js",
     "dev-server": "nodemon -w src -x ts-node src/index.ts",
-    "lint": "tslint src/**/*.ts",
-    "lint:watch": "watch 'npm run lint' ./src -du"
+    "lint": "tslint src/**/*.ts test/**/*.ts",
+    "lint:watch": "watch 'npm run lint -- --force' ./src ./test -du"
   },
   "repository": {
     "type": "git",

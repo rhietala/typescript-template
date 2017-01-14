@@ -10,13 +10,17 @@ Runs `ts-node` on `index.ts` and watches for changes. Routes that work are
 <!-- markdown fix: codeblock after list -->
 
     npm run build
-    npm run build-watch
+    npm run build:watch
 
-Compiles typescript under `src/` to javascript under `build/`.
+Compiles typescript under `src/` and `test/` to javascript under `build/`.
 
     npm run test
-    npm run test-watch
+    npm run test:watch
 
-Runs tests from under `test/`. Watch doesn't compile the tests, so you have
-to have both `build-watch` and `test-watch` running in separate windows.
+Runs tests from under `test/`.
+
+    npm run lint
+    npm run lint:watch
+
+Runs `tslint` on files under `src/` and `test/`.
 
