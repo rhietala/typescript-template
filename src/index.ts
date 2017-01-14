@@ -1,5 +1,6 @@
 import * as Koa from "koa";
 import * as bodyParser from "koa-bodyparser";
+import * as winston from "winston";
 
 import router from "./routes";
 
@@ -10,6 +11,6 @@ app.use(bodyParser())
     .use(router.routes())
     .use(router.allowedMethods());
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => winston.info(`Listening on port ${port}`));
 
 export default app;
