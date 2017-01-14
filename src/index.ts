@@ -1,6 +1,5 @@
 import * as Koa from "koa";
 import * as bodyParser from "koa-bodyparser";
-import * as chalk from "chalk";
 
 import router from "./routes";
 
@@ -14,4 +13,3 @@ app.use(bodyParser())
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 export default app;
-
