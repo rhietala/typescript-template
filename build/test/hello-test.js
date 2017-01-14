@@ -1,3 +1,4 @@
+/* tslint:disable:no-expression-statement */
 "use strict";
 const chai_1 = require("chai");
 require("mocha");

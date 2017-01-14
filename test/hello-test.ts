@@ -1,3 +1,5 @@
+/* tslint:disable:no-expression-statement */
+
 import { expect } from "chai";
 import "mocha";
 import { helloWorld } from "../src/hello";

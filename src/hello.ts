@@ -1,8 +1,12 @@
+type Numero = number;
+type Numret = number;
+
 export function helloWorld(): string {
-    return "Hello world!" + abc(1);
+    const a: Numret = 1;
+    return "Hello world!" + abc(a);
 }
 
-function abc(i: number): string {
+function abc(i: Numero): string {
     return "abc " + i;
 }
 

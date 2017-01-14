@@ -1,6 +1,7 @@
 "use strict";
 function helloWorld() {
-    return "Hello world!" + abc(1);
+    const a = 1;
+    return "Hello world!" + abc(a);
 }
 exports.helloWorld = helloWorld;
 function abc(i) {

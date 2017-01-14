@@ -1,3 +1,4 @@
+/* tslint:disable:no-expression-statement */
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -10,9 +11,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const Router = require("koa-router");
 const hello_1 = require("./hello");
 const router = new Router();
-/**
- * Index page. Currently doesn"t do anything. ¯\_(ツ)_/¯
- */
 router.get("/", (ctx, next) => __awaiter(this, void 0, void 0, function* () {
     yield next();
     ctx.body = "(This page intentionally left blank)";
