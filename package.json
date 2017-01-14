@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && mocha build/test",
-    "test-watch": "mocha -w build/test",
+    "test:watch": "mocha -w build/test",
     "postinstall": "npm run build",
     "build": "tsc",
-    "build-watch": "tsc -w",
+    "build:watch": "tsc -w",
     "start": "node build/index.js",
     "dev-server": "nodemon -w src -x ts-node src/index.ts",
-    "lint": "tslint -c tslint.json src/**/*.ts",
-    "lint-watch": "nodemon -w src -x tslint src/**/*.ts"
+    "lint": "tslint src/**/*.ts",
+    "lint:watch": "watch 'npm run lint' ./src -du"
   },
   "repository": {
     "type": "git",
@@ -53,6 +53,7 @@
     "supertest-as-promised": "^3.2.0",
     "ts-node": "^1.7.0",
     "tslint": "^4.3.1",
-    "typescript": "^2.1.5"
+    "typescript": "^2.1.5",
+    "watch": "latest"
   }
 }
