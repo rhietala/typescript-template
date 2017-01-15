@@ -9,3 +9,11 @@ describe("Hello function", () => {
         chai_1.expect(result).to.equal("Hello world!abc 1");
     });
 });
+describe("onlyPositives", () => {
+    it("returns only positives", () => {
+        const input = [-1, 2, -2, -5, 4];
+        const expected = [2, 4];
+        const result = hello_1.onlyPositives(input);
+        chai_1.expect(result).to.eql(expected);
+    });
+});
