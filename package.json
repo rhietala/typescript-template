@@ -10,7 +10,7 @@
     "postinstall": "npm run build",
     "build": "tsc",
     "build:watch": "tsc -w",
-    "start": "node build/index.js",
+    "start": "NODE_ENV=production node --harmony build/src/index.js",
     "dev-server": "nodemon -w src -x ts-node --harmony src/index.ts",
     "lint": "tslint src/**/*.ts test/**/*.ts",
     "lint:watch": "watch 'npm run lint -- --force' ./src ./test -du"
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/rhietala/typescript-template#readme",
   "dependencies": {
+    "@types/convict": "^0.6.33",
     "@types/form-data": "0.0.32",
     "@types/koa": "2.0.34",
     "@types/koa-bodyparser": "3.0.20",
@@ -34,6 +35,7 @@
     "@types/node": "6.0.48",
     "@types/ramda": "0.0.2",
     "@types/winston": "2.2.0",
+    "convict": "^2.0.0",
     "dotenv": "2.0.0",
     "koa": "2.0.0",
     "koa-bodyparser": "3.1.0",

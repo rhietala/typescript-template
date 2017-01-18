@@ -24,6 +24,10 @@ Runs tests from under `test/`.
 
 Runs `tslint` on files under `src/` and `test/`.
 
+    npm start
+
+Runs server with production mode configuration.
+
 
 ## Adding new type definitions for node_modules
 

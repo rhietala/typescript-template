@@ -3,10 +3,12 @@ import * as bodyParser from "koa-bodyparser";
 import * as logger from "koa-logger-winston";
 import * as winston from "winston";
 
+import conf from "./config";
 import router from "./routes";
 
 const app = new Koa();
-const port = process.env.PORT || 3000;
+const ip = conf.get("ip");
+const port = conf.get("port");
 
 // tslint:disable-next-line:no-expression-statement
 app.use(bodyParser())
@@ -15,6 +17,6 @@ app.use(bodyParser())
   .use(router.allowedMethods());
 
 // tslint:disable-next-line:no-expression-statement
-app.listen(port, () => winston.info(`Listening on port ${port}`));
+app.listen(port, ip, () => winston.info(`Listening on ${ip}:${port}`));
 
 export default app;
