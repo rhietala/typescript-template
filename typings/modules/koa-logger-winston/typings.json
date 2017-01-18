@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "/Users/rhietala/co/typescript-template/shared_types/koa-logger-winston.d.ts",
+    "raw": "file:shared_types/koa-logger-winston.d.ts",
+    "typings": "/Users/rhietala/co/typescript-template/shared_types/koa-logger-winston.d.ts"
+  }
+}

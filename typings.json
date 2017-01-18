@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "koa-logger-winston": "file:shared_types/koa-logger-winston.d.ts"
+  }
+}

@@ -24,3 +24,16 @@ Runs tests from under `test/`.
 
 Runs `tslint` on files under `src/` and `test/`.
 
+
+## Adding new type definitions for node_modules
+
+Install typings:
+
+    npm install -g typings
+
+Write your type definition to `./shared_types/library_name.d.ts`. Build the type defitions:
+
+    typings install file:shared_types/library_name.d.ts --save
+
+This should add the library type defitions to `typings.json`, `./typings/index.d.ts` and
+`./typings/modules/library_name/`.
